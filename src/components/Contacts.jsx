@@ -121,13 +121,13 @@ const Contacts = () => {
               <h4 className="text-white font-semibold mb-4">Follow Me</h4>
               <div className="flex space-x-4">
                 <a
-                  href="#"
+                  href="https://github.com/betsiha1994"
                   className="w-10 h-10 bg-gray-700 rounded-lg flex items-center justify-center hover:bg-blue-500 transition duration-300"
                 >
                   <FaGithub className="text-white text-lg" />
                 </a>
                 <a
-                  href="#"
+                  href="https://www.linkedin.com/in/asres-yayeh-524424350/"
                   className="w-10 h-10 bg-gray-700 rounded-lg flex items-center justify-center hover:bg-blue-500 transition duration-300"
                 >
                   <FaLinkedin className="text-white text-lg" />
