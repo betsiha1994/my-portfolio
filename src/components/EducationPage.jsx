@@ -84,7 +84,7 @@ const Education = () => {
 
             <div className="flex justify-center gap-8 mb-6">
               <div className="text-gray-300">
-                <span>2019 - 2024</span>
+                <span></span>
               </div>
               <div className="text-gray-300">
                 <span>Bahir Dar, Ethiopia</span>
