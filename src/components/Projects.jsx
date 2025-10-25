@@ -11,9 +11,9 @@ const projects = [
     demo: "https://itil-system-demo.com",
   },
   {
-    title: "Restaurant Ordering System",
+    title: "Food Delivery Platform",
     description:
-      "Full-stack restaurant ordering system with real-time updates and user authentication.",
+      "Full-stack food delivery platform with real-time updates and user authentication.",
     tech: ["React", "Express", "Node.js", "MongoDB"],
     github: "https://github.com/betsiha1994/restaurant-backend",
     demo: "https://restaurant-ordering-system-demo.com",
@@ -89,7 +89,7 @@ const Projects = () => {
             </div>
           ))}
         </div>
-        
+
         <div className="text-center mt-12">
           <p className="text-gray-300 mb-6">
             Interested in seeing more of my work?
