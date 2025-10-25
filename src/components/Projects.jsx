@@ -94,9 +94,13 @@ const Projects = () => {
           <p className="text-gray-300 mb-6">
             Interested in seeing more of my work?
           </p>
-          <button className="bg-blue-500 hover:bg-blue-600 text-white font-semibold px-6 py-3 rounded-lg transition duration-300 text-sm">
+          <Link
+            to="https://github.com/betsiha1994"
+            target="_blank"
+            className="bg-blue-500 hover:bg-blue-600 text-white font-semibold px-6 py-3 rounded-lg transition duration-300 text-sm"
+          >
             View All Projects
-          </button>
+          </Link>
         </div>
       </div>
     </section>
