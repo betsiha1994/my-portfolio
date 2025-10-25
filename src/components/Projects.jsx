@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-scroll";
 import { FaGithub, FaExternalLinkAlt } from "react-icons/fa";
 
 const projects = [
@@ -94,13 +95,14 @@ const Projects = () => {
           <p className="text-gray-300 mb-6">
             Interested in seeing more of my work?
           </p>
-          <Link
-            to="https://github.com/betsiha1994"
+          <a
+            href="https://github.com/betsiha1994"
             target="_blank"
+            rel="noopener noreferrer"
             className="bg-blue-500 hover:bg-blue-600 text-white font-semibold px-6 py-3 rounded-lg transition duration-300 text-sm"
           >
             View All Projects
-          </Link>
+          </a>
         </div>
       </div>
     </section>
