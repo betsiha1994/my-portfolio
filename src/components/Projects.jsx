@@ -16,14 +16,15 @@ const projects = [
     description:
       "Full-stack food delivery platform with real-time updates and user authentication.",
     tech: ["React", "Express", "Node.js", "MongoDB"],
-    github: "https://github.com/betsiha1994/restaurant-backend",
+    github: "https://github.com/betsiha1994/E-kebele-backend",
     demo: "https://restaurant-ordering-system-demo.com",
   },
   {
-    title: "SMS API Integration Service",
+    title: "e-Kebele system",
     description:
-      "SMS API integration service for sending and receiving SMS messages.",
-    tech: ["React", "Node.js", "Express", "Twilio API"],
+      "An e-Kebele digital service for managing civil registrations, online requests, approvals, certificate generation, and citizen notifications.",
+
+    tech: ["React", "Node.js", "Express", "PostegreSQL"],
     github: "https://github.com/betsiha1994/sms-api-backend",
     demo: "https://sms-api-service-demo.com",
   },
