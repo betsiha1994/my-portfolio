@@ -7,7 +7,6 @@ const Education = () => {
       className="w-full min-h-screen bg-gradient-to-br from-gray-900 to-gray-800 py-20 px-6"
     >
       <div className="max-w-6xl mx-auto">
-       
         <div className="text-center mb-16">
           <h2 className="text-4xl font-bold text-white mb-4">Education</h2>
           <div className="w-20 h-1 bg-blue-400 mx-auto mb-6"></div>
@@ -19,7 +18,7 @@ const Education = () => {
         <div className="bg-gray-800 rounded-xl p-8 border border-gray-700 max-w-2xl mx-auto">
           <div className="text-center">
             <h3 className="text-2xl font-bold text-white mb-2">
-              Computer Engineering Student
+              Computer Engineer
             </h3>
             <p className="text-blue-400 text-xl font-semibold mb-4">
               Bahir Dar University

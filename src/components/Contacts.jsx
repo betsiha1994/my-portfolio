@@ -41,6 +41,12 @@ const Contacts = () => {
       .then((result) => {
         console.log("Email sent successfully:", result.text);
         setSubmitStatus("success");
+        setSubmitStatus("success");
+
+        setTimeout(() => {
+          setSubmitStatus(null); // or "idle"
+        }, 3000); // 3 seconds
+
         setFormData({
           name: "",
           email: "",
@@ -92,7 +98,9 @@ const Contacts = () => {
                 </div>
                 <div>
                   <p className="text-gray-400 text-sm">Email</p>
-                  <p className="text-white font-medium">yayehasres@gmail.com</p>
+                  <p className="text-white font-medium">
+                    yayehasres1221@gmail.com
+                  </p>
                 </div>
               </div>
 

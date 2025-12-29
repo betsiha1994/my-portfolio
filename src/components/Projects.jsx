@@ -9,24 +9,24 @@ const projects = [
       "Full-stack ITIL service and request management system with React frontend, Node.js backend, and MongoDB database.",
     tech: ["React", "Node.js", "MongoDB", "Express"],
     github: "https://github.com/betsiha1994/itil-backend",
-    demo: "https://itil-system-demo.com",
+    demo: null,
   },
   {
     title: "Food Delivery Platform",
     description:
       "Full-stack food delivery platform with real-time updates and user authentication.",
     tech: ["React", "Express", "Node.js", "MongoDB"],
-    github: "https://github.com/betsiha1994/E-kebele-backend",
-    demo: "https://restaurant-ordering-system-demo.com",
+    github: "https://github.com/betsiha1994/restaurant-backend",
+    demo: null,
   },
   {
     title: "e-Kebele system",
     description:
       "An e-Kebele digital service for managing civil registrations, online requests, approvals, certificate generation, and citizen notifications.",
 
-    tech: ["React", "Node.js", "Express", "PostegreSQL"],
+    tech: ["React", "Node.js", "Express", "PostgreSQL"],
     github: "https://github.com/betsiha1994/sms-api-backend",
-    demo: "https://sms-api-service-demo.com",
+    demo: "https://e-kebele-q7xwwy3xn-yayehasres1221-9605s-projects.vercel.app/",
   },
 ];
 
@@ -79,14 +79,17 @@ const Projects = () => {
                 >
                   <FaGithub /> Code
                 </a>
-                {/* <a
-                  href={project.demo}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="text-gray-400 hover:text-blue-400 flex items-center gap-2 transition duration-300 text-sm"
-                >
-                  <FaExternalLinkAlt /> Live Demo
-                </a> */}
+
+                {project.demo && (
+                  <a
+                    href={project.demo}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="text-gray-400 hover:text-blue-400 flex items-center gap-2 transition duration-300 text-sm"
+                  >
+                    <FaExternalLinkAlt /> Live Demo
+                  </a>
+                )}
               </div>
             </div>
           ))}

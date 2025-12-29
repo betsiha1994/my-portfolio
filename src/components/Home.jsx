@@ -50,9 +50,10 @@ const Home = () => {
                 <img
                   src={profileImage}
                   alt="Asres Yayeh"
-                  className="rounded-full w-64 h-64 object-cover shadow-lg border-4 border-blue-400"
+                  className="rounded-full w-full h-full object-cover shadow-lg"
                 />
               </div>
+
               <div className="absolute -bottom-4 -right-4 bg-gray-800 p-4 rounded-lg shadow-lg border border-gray-700">
                 <div className="text-center">
                   <p className="font-bold text-white">Full-Stack</p>
