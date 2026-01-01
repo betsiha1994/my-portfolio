@@ -26,7 +26,7 @@ const projects = [
 
     tech: ["React", "Node.js", "Express", "PostgreSQL"],
     github: "https://github.com/betsiha1994/sms-api-backend",
-    demo: "https://e-kebele-q7xwwy3xn-yayehasres1221-9605s-projects.vercel.app/",
+    demo: "https://e-kebele-git-main-yayehasres1221-9605s-projects.vercel.app/",
   },
 ];
 
