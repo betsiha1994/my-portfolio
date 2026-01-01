@@ -33,11 +33,12 @@ const Contacts = () => {
 
     emailjs
       .send(
-        "service_zwepzbf",
-        "template_soldhe2",
-        formData,
-        "5n-EWqcovDQvZPJSE"
+        "service_ijzqmgg", // Correct Service ID
+        "template_soldhe2", // Your Template ID
+        formData, // Your form data
+        "5n-EWqcovDQvZPJSE" // Your Public Key
       )
+
       .then((result) => {
         console.log("Email sent successfully:", result.text);
         setSubmitStatus("success");
