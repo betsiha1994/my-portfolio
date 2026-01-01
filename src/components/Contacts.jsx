@@ -33,10 +33,10 @@ const Contacts = () => {
 
     emailjs
       .send(
-        "service_ijzqmgg",
-        "template_f6zalaf",
+        "service_zwepzbf",
+        "template_soldhe2",
         formData,
-        "eaXwdzzVU5z2IONWv"
+        "5n-EWqcovDQvZPJSE"
       )
       .then((result) => {
         console.log("Email sent successfully:", result.text);
