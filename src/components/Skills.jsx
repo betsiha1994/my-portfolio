@@ -53,9 +53,9 @@ const Skills = () => {
   const getLevelBar = (level) => {
     switch (level) {
       case "Expert":
-        return "w-5/6";
+        return "w-full";
       case "Advanced":
-        return "w-2/3";
+        return "w-6/7";
       case "Intermediate":
         return "w-1/2";
       default:
@@ -96,7 +96,7 @@ const Skills = () => {
               <div className="flex items-center justify-between mb-3">
                 <span
                   className={`text-sm font-semibold ${getLevelColor(
-                    skill.level
+                    skill.level,
                   )}`}
                 >
                   {skill.level}
@@ -106,7 +106,7 @@ const Skills = () => {
               <div className="w-full bg-gray-700 rounded-full h-2 mb-4">
                 <div
                   className={`h-2 rounded-full bg-blue-500 transition-all duration-500 ${getLevelBar(
-                    skill.level
+                    skill.level,
                   )}`}
                 ></div>
               </div>
