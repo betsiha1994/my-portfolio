@@ -7,7 +7,7 @@ import {
   FaGithub,
   FaTwitter,
 } from "react-icons/fa";
-import emailjs from "emailjs-com";
+import emailjs from "@emailjs/browser";
 
 const Contacts = () => {
   const [formData, setFormData] = useState({
@@ -31,33 +31,51 @@ const Contacts = () => {
     setIsSubmitting(true);
     setSubmitStatus(null);
 
+    // Format template parameters for EmailJS
+    const templateParams = {
+      name: formData.name,
+      email: formData.email,
+      message: formData.message,
+      time: new Date().toLocaleString(), // optional
+    };
+
     emailjs
       .send(
-        "service_ijzqmgg", // Correct Service ID
-        "template_soldhe2", // Your Template ID
-        formData, // Your form data
-        "5n-EWqcovDQvZPJSE" // Your Public Key
+        "service_zwepzbf", // ✅ CORRECT service ID
+        "template_soldhe2", // ✅ Your template ID
+        templateParams, // ✅ Parameters
+        "5n-EWqcovDQvZPJSE", // ✅ Public key
       )
-
       .then((result) => {
         console.log("Email sent successfully:", result.text);
         setSubmitStatus("success");
-        setSubmitStatus("success");
 
-        setTimeout(() => {
-          setSubmitStatus(null); // or "idle"
-        }, 3000); // 3 seconds
-
+        // Reset form
         setFormData({
           name: "",
           email: "",
           subject: "",
           message: "",
         });
+
+        // Clear success message after 5 seconds
+        setTimeout(() => {
+          setSubmitStatus(null);
+        }, 5000);
       })
       .catch((error) => {
-        console.error("Email send failed:", error.text);
+        console.error("Email send failed:", error);
+        console.error("Error details:", {
+          status: error.status,
+          text: error.text,
+          message: error.message,
+        });
         setSubmitStatus("error");
+
+        // Clear error message after 5 seconds
+        setTimeout(() => {
+          setSubmitStatus(null);
+        }, 5000);
       })
       .finally(() => {
         setIsSubmitting(false);

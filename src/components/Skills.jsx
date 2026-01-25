@@ -1,15 +1,21 @@
 import React from "react";
 import { Link } from "react-scroll";
 import { FaReact, FaNodeJs } from "react-icons/fa";
-import { SiMongodb, SiExpress } from "react-icons/si";
+import { SiMongodb, SiExpress, SiPostgresql } from "react-icons/si";
 
 const Skills = () => {
-  const mernSkills = [
+  const fullStackSkills = [
     {
       name: "MongoDB",
       icon: <SiMongodb className="w-16 h-16" />,
       level: "Advanced",
       description: "NoSQL database design, aggregation, and optimization",
+    },
+    {
+      name: "PostgreSQL",
+      icon: <SiPostgresql className="w-16 h-16" />,
+      level: "Advanced",
+      description: "Relational database design, queries, and optimization",
     },
     {
       name: "Express.js",
@@ -65,18 +71,18 @@ const Skills = () => {
       <div className="max-w-7xl mx-auto">
         <div className="text-center mb-16">
           <h2 className="text-4xl md:text-5xl font-bold text-white mb-4">
-            MERN Stack Skills
+            Full Stack Skills
           </h2>
           <div className="w-20 h-1 bg-blue-400 mx-auto mb-6"></div>
           <p className="text-gray-300 text-lg max-w-3xl mx-auto leading-relaxed">
-            Specialized expertise in the complete MERN stack ecosystem. From
-            database design to frontend development, I master the technologies
-            that power modern web applications.
+            Specialized expertise in full-stack development. From database
+            design to frontend development, I master the technologies that power
+            modern web applications.
           </p>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mb-16">
-          {mernSkills.map((skill, index) => (
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-5 gap-6 mb-16">
+          {fullStackSkills.map((skill, index) => (
             <div
               key={skill.name}
               className="bg-gray-800 rounded-xl p-6 border border-gray-700 hover:border-blue-400 transition-all duration-300 group"
@@ -115,13 +121,12 @@ const Skills = () => {
         <div className="bg-gray-800 rounded-2xl p-8 border border-gray-700">
           <div className="text-center mb-8">
             <h3 className="text-2xl font-bold text-white mb-4">
-              Why MERN Stack?
+              Why Full Stack Development?
             </h3>
             <p className="text-gray-300 max-w-3xl mx-auto">
-              The MERN stack enables me to build full-stack JavaScript
-              applications with a unified language, ensuring consistency, faster
-              development, and seamless integration between frontend and
-              backend.
+              Full-stack development enables me to build complete applications
+              with a unified approach, ensuring consistency, faster development,
+              and seamless integration between frontend and backend.
             </p>
           </div>
 
@@ -163,7 +168,7 @@ const Skills = () => {
 
         <div className="text-center mt-12">
           <p className="text-gray-300 mb-6">
-            Ready to build something amazing with the MERN stack?
+            Ready to build something amazing with full-stack development?
           </p>
           <Link
             to="contact"

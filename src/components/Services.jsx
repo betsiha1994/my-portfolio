@@ -7,7 +7,7 @@ const Services = () => {
       icon: "fas fa-laptop-code",
       title: "Full-Stack Development",
       description:
-        "End-to-end web application development using the MERN stack. From database design to frontend implementation, I deliver complete, scalable solutions.",
+        "End-to-end web application development using modern full-stack technologies. From database design to frontend implementation, I deliver complete, scalable solutions.",
       features: [
         "MongoDB Database Design",
         "Express.js REST APIs",

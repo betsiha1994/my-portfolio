@@ -1,6 +1,6 @@
 import React from "react";
 
-const Education = () => {
+const EducationPage = () => {
   return (
     <section
       id="education"
@@ -85,4 +85,4 @@ const Education = () => {
   );
 };
 
-export default Education;
+export default EducationPage;

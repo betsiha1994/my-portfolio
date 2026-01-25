@@ -19,7 +19,7 @@ const About = () => {
             />
             <div className="absolute -bottom-4 -right-4 bg-gray-800 p-3 rounded-lg shadow-lg border border-gray-700">
               <div className="text-center">
-                <p className="font-bold text-white text-sm">MERN Stack</p>
+                <p className="font-bold text-white text-sm">Full Stack</p>
                 <p className="text-blue-400 text-xs">Developer</p>
               </div>
             </div>
@@ -33,14 +33,14 @@ const About = () => {
           <p className="text-gray-300 mb-4 leading-relaxed">
             Hello! I'm{" "}
             <span className="text-blue-400 font-semibold">Asres Yayeh</span>, a
-            passionate MERN Stack Developer dedicated to crafting exceptional
+            passionate Full Stack Developer dedicated to crafting exceptional
             digital experiences. I thrive on transforming complex ideas into
             clean, efficient, and scalable web applications that make a real
             impact.
           </p>
           <p className="text-gray-300 mb-4 leading-relaxed">
-            With expertise in the complete MERN stack (MongoDB, Express.js,
-            React, Node.js), I build full-stack solutions that are not only
+            With expertise in various technologies including MongoDB, Express.js,
+            React, Node.js, and more, I build full-stack solutions that are not only
             technically robust but also user-centric. I'm constantly exploring
             new technologies and best practices to push the boundaries of what's
             possible in web development.
@@ -55,7 +55,7 @@ const About = () => {
             <Link
               to="contact"
               smooth={true}
-              durattion={500}
+              duration={500}
               className="border-2 border-blue-400 text-blue-400 hover:bg-blue-400 hover:text-white font-semibold px-8 py-3 rounded-lg transition duration-300"
             >
               Let's Talk

@@ -42,8 +42,8 @@ const Projects = () => {
         </h2>
         <div className="w-20 h-1 bg-blue-400 mx-auto mb-8"></div>
         <p className="text-gray-300 text-center mb-12 max-w-2xl mx-auto">
-          Here are some of my recent MERN stack projects that showcase my skills
-          in building full-stack applications.
+          Here are some of my recent full-stack projects that showcase my skills
+          in building complete applications.
         </p>
 
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
