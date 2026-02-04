@@ -8,7 +8,7 @@ const projects = [
     description:
       "Full-stack ITIL service and request management system with React frontend, Node.js backend, and MongoDB database.",
     tech: ["React", "Node.js", "MongoDB", "Express"],
-    github: "https://github.com/betsiha1994/itil-backend",
+    github: "https://github.com/Asresyayeh/itil-backend",
     demo: null,
   },
   {
@@ -16,7 +16,7 @@ const projects = [
     description:
       "Full-stack food delivery platform with real-time updates and user authentication.",
     tech: ["React", "Express", "Node.js", "MongoDB"],
-    github: "https://github.com/betsiha1994/restaurant-backend",
+    github: "https://github.com/Asresyayeh/restaurant-backend",
     demo: null,
   },
   {
@@ -25,7 +25,7 @@ const projects = [
       "An e-Kebele digital service for managing civil registrations, online requests, approvals, certificate generation, and citizen notifications.",
 
     tech: ["React", "Node.js", "Express", "PostgreSQL"],
-    github: "https://github.com/betsiha1994/sms-api-backend",
+    github: "https://github.com/Asresyayeh/e-kebele-backend",
     demo: "https://e-kebele-git-main-yayehasres1221-9605s-projects.vercel.app/",
   },
 ];
