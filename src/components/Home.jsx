@@ -1,5 +1,6 @@
 import React from "react";
 import { Link } from "react-scroll";
+import { FaBolt } from "react-icons/fa";
 import backgroundImage from "../assets/image1.jpg";
 
 const Home = () => {
@@ -14,34 +15,36 @@ const Home = () => {
         backgroundRepeat: "no-repeat",
       }}
     >
-      {/* Code pattern overlay */}
       <div className="absolute inset-0 bg-code-pattern opacity-20"></div>
-
-      {/* Dark gradient overlay for better text readability */}
-      <div className="absolute inset-0 bg-gradient-to-br from-gray-900/40 via-gray-800/35 to-gray-900/40"></div>
+      <div className="absolute inset-0 bg-gradient-to-br from-slate-950/70 via-slate-900/40 to-slate-950/80"></div>
 
       <div className="max-w-7xl mx-auto px-4 py-16 relative z-10">
-        <div className="flex flex-col items-center justify-center text-center w-full">
-          <div className="w-full max-w-4xl">
-            <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold mb-6 bg-gradient-to-r from-white/95 via-white/90 to-blue-400/95 bg-clip-text text-transparent drop-shadow-[0_4px_20px_rgba(0,0,0,0.8)]">
-              I'm a <span className="text-blue-400">Passionate</span> Full Stack
-              Developer
-            </h1>
-            <h2 className="text-2xl md:text-4xl lg:text-5xl font-semibold mb-8 text-blue-400/95 drop-shadow-[0_3px_15px_rgba(0,0,0,0.8)]">
-              Asres Yayeh
-            </h2>
-            <p className="text-lg md:text-xl lg:text-2xl mb-10 leading-relaxed text-gray-200/90 drop-shadow-[0_2px_10px_rgba(0,0,0,0.8)] max-w-3xl mx-auto">
-              Crafting digital experiences that blend cutting-edge technology
-              with elegant design. I breathe life into ideas through code,
-              transforming complex problems into seamless, user-centric
-              solutions.
-            </p>
-            <div className="flex flex-col sm:flex-row justify-center items-center gap-4 mb-12">
+        <div className="grid gap-14 lg:grid-cols-[1.6fr_1fr] items-center">
+          <div className="space-y-8 text-center lg:text-left">
+            <span className="inline-flex items-center gap-2 rounded-full border border-blue-400/25 bg-slate-900/60 px-4 py-2 text-sm font-semibold uppercase tracking-[0.32em] text-blue-300 shadow-sm shadow-blue-500/10">
+              <FaBolt className="h-4 w-4" /> Full Stack Developer
+            </span>
+
+            <div className="space-y-6">
+              <h1 className="text-4xl md:text-5xl lg:text-5xl font-medium tracking-tight leading-[1.1] text-transparent bg-gradient-to-r from-white via-slate-100 to-blue-300 bg-clip-text drop-shadow-[0_8px_32px_rgba(0,0,0,0.4)]">
+                I build memorable digital products with beautiful interactions.
+              </h1>
+              <h2 className="text-2xl md:text-3xl lg:text-4xl font-medium text-blue-300/90">
+                Asres Yayeh
+              </h2>
+              <p className="mx-auto max-w-3xl text-base leading-relaxed text-slate-200/80 sm:mx-0">
+                I create elegant, responsive applications using modern web
+                tools. My focus is on clean design, smooth performance, and
+                user-first experiences that delight every time.
+              </p>
+            </div>
+
+            <div className="flex flex-col items-center justify-center gap-4 sm:flex-row sm:justify-start">
               <Link
                 to="projects"
                 smooth={true}
                 duration={500}
-                className="bg-blue-500/90 hover:bg-blue-600/90 backdrop-blur-sm text-white px-8 py-4 rounded-lg font-medium transition duration-300 cursor-pointer text-lg shadow-lg hover:shadow-xl"
+                className="inline-flex items-center justify-center rounded-full bg-blue-500 px-8 py-4 text-lg font-semibold text-white shadow-lg shadow-blue-500/20 transition duration-300 hover:bg-blue-600"
               >
                 Explore My Work
               </Link>
@@ -49,56 +52,39 @@ const Home = () => {
                 to="contact"
                 smooth={true}
                 duration={500}
-                className="border-2 border-blue-400/90 text-blue-400/90 hover:bg-blue-400/90 hover:text-white backdrop-blur-sm px-8 py-4 rounded-lg font-medium transition duration-300 cursor-pointer text-lg shadow-lg hover:shadow-xl"
+                className="inline-flex items-center justify-center rounded-full border border-blue-400/60 bg-slate-900/70 px-8 py-4 text-lg font-semibold text-blue-200 transition duration-300 hover:border-blue-300 hover:bg-blue-500/15 hover:text-white"
               >
                 Let's Connect
               </Link>
             </div>
           </div>
-        </div>
 
-        <div className="mt-20 grid grid-cols-1 md:grid-cols-3 gap-6">
-          <div className="bg-gray-800/80 backdrop-blur-sm p-6 rounded-lg shadow-lg text-center border border-gray-700/50 hover:border-blue-400/80 transition duration-300">
-            <i className="fas fa-bolt text-blue-400 text-3xl mb-4"></i>
-            <h3 className="text-2xl font-bold text-white/95">
-              Fast & Scalable
-            </h3>
-            <p className="text-gray-300/90">
-              Building performant applications that grow with your business
-            </p>
-          </div>
-          <div className="bg-gray-800/80 backdrop-blur-sm p-6 rounded-lg shadow-lg text-center border border-gray-700/50 hover:border-blue-400/80 transition duration-300">
-            <i className="fas fa-mobile-alt text-blue-400 text-3xl mb-4"></i>
-            <h3 className="text-2xl font-bold text-white/95">
-              Responsive Design
-            </h3>
-            <p className="text-gray-300/90">
-              Creating flawless experiences across all devices and platforms
-            </p>
-          </div>
-          <div className="bg-gray-800/80 backdrop-blur-sm p-6 rounded-lg shadow-lg text-center border border-gray-700/50 hover:border-blue-400/80 transition duration-300">
-            <i className="fas fa-rocket text-blue-400 text-3xl mb-4"></i>
-            <h3 className="text-2xl font-bold text-white/95">
-              Modern Tech Stack
-            </h3>
-            <p className="text-gray-300/90">
-              Leveraging the latest technologies for cutting-edge solutions
-            </p>
-          </div>
-        </div>
-
-        <div className="mt-16 text-center">
-          <div className="bg-gray-800/80 backdrop-blur-sm rounded-xl p-8 border border-gray-700/50">
-            <i className="fas fa-heart text-blue-400 text-4xl mb-4"></i>
-            <h3 className="text-2xl font-bold text-white/95 mb-4">
-              Why I Love What I Do
-            </h3>
-            <p className="text-gray-200/90 text-lg max-w-4xl mx-auto leading-relaxed">
-              "I'm passionate about turning complex challenges into elegant
-              digital solutions. There's nothing more rewarding than seeing code
-              come to life and create meaningful impact for users. Every line of
-              code is an opportunity to build something amazing."
-            </p>
+          <div className="rounded-[32px] border border-white/10 bg-white/5 p-1 shadow-2xl shadow-slate-950/40 backdrop-blur-xl">
+            <div className="h-full rounded-[30px] bg-slate-900/90 p-8 text-white">
+              <div className="grid gap-4">
+                <div className="rounded-3xl border border-white/10 bg-slate-950/90 p-5">
+                  <p className="text-lg font-semibold text-white">Plan</p>
+                  <p className="mt-2 text-sm text-slate-400">
+                    Scope the project, map requirements, and choose the best
+                    approach.
+                  </p>
+                </div>
+                <div className="rounded-3xl border border-white/10 bg-slate-950/90 p-5">
+                  <p className="text-lg font-semibold text-white">Build</p>
+                  <p className="mt-2 text-sm text-slate-400">
+                    Develop a polished, responsive product with clean UX and
+                    strong code.
+                  </p>
+                </div>
+                <div className="rounded-3xl border border-white/10 bg-slate-950/90 p-5">
+                  <p className="text-lg font-semibold text-white">Launch</p>
+                  <p className="mt-2 text-sm text-slate-400">
+                    Deploy reliably, monitor performance, and iterate with
+                    confidence.
+                  </p>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
       </div>

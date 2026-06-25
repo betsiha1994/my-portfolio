@@ -4,79 +4,84 @@ const EducationPage = () => {
   return (
     <section
       id="education"
-      className="w-full min-h-screen bg-gradient-to-br from-gray-900 to-gray-800 py-20 px-6"
+      className="relative w-full min-h-screen overflow-hidden py-20 px-6"
     >
-      <div className="max-w-6xl mx-auto">
+      <div className="absolute inset-0 bg-slate-950/95"></div>
+      <div className="absolute inset-0 bg-[radial-gradient(circle_at_top_left,rgba(59,130,246,0.16),transparent_20%),radial-gradient(circle_at_bottom_right,rgba(56,189,248,0.12),transparent_22%)] pointer-events-none"></div>
+      <div className="relative z-10 max-w-6xl mx-auto">
         <div className="text-center mb-16">
-          <h2 className="text-4xl font-bold text-white mb-4">Education</h2>
-          <div className="w-20 h-1 bg-blue-400 mx-auto mb-6"></div>
-          <p className="text-gray-300 max-w-2xl mx-auto">
-            My educational background that shapes my journey as a developer
+          <span className="inline-flex rounded-full border border-blue-400/20 bg-blue-500/10 px-4 py-2 text-sm uppercase tracking-[0.28em] text-blue-300 shadow-sm shadow-blue-500/10">
+            Education
+          </span>
+          <h2 className="mt-6 text-4xl md:text-5xl font-semibold text-white leading-tight">
+            Academic journey and focus areas
+          </h2>
+          <p className="mx-auto mt-5 max-w-3xl text-gray-300 text-lg leading-relaxed">
+            A strong academic foundation in engineering and full-stack
+            development shapes how I approach every project.
           </p>
         </div>
 
-        <div className="bg-gray-800 rounded-xl p-8 border border-gray-700 max-w-2xl mx-auto">
-          <div className="text-center">
-            <h3 className="text-2xl font-bold text-white mb-2">
-              Computer Engineer
-            </h3>
-            <p className="text-blue-400 text-xl font-semibold mb-4">
-              Bahir Dar University
-            </p>
-
-            <div className="flex justify-center gap-8 mb-6">
-              <div className="text-gray-300">
-                <span></span>
+        <div className="rounded-[32px] border border-white/10 bg-white/5 backdrop-blur-xl p-10 shadow-2xl shadow-slate-950/40">
+          <div className="grid gap-10 lg:grid-cols-[0.95fr_1.05fr] items-center">
+            <div className="rounded-[32px] border border-white/10 bg-slate-950/75 p-8 shadow-inner shadow-slate-950/20">
+              <h3 className="text-3xl font-semibold text-white mb-3">
+                Computer Engineer
+              </h3>
+              <p className="text-blue-300 text-xl font-medium mb-6">
+                Bahir Dar University
+              </p>
+              <div className="flex flex-wrap justify-center gap-6 mb-8 text-sm text-slate-400">
+                <span className="rounded-full border border-blue-400/20 bg-slate-900/70 px-4 py-2">
+                  Bahir Dar, Ethiopia
+                </span>
+                <span className="rounded-full border border-blue-400/20 bg-slate-900/70 px-4 py-2">
+                  2020 - 2024
+                </span>
               </div>
-              <div className="text-gray-300">
-                <span>Bahir Dar, Ethiopia</span>
-              </div>
+              <p className="text-slate-300 leading-relaxed">
+                Studied software engineering fundamentals with a strong emphasis
+                on web development, database systems, and scalable application
+                design. Collaborated on hands-on projects and built real-world
+                solutions throughout the degree program.
+              </p>
             </div>
 
-            <p className="text-gray-300 leading-relaxed">
-              Currently pursuing my degree in Computer Engineering, focusing on
-              software development, web technologies, and building scalable
-              applications. My academic journey has provided me with a strong
-              foundation in computer science principles while allowing me to
-              specialize in full-stack web development.
-            </p>
-          </div>
-        </div>
-
-        <div className="max-w-2xl mx-auto mt-12">
-          <h3 className="text-2xl font-bold text-white text-center mb-8">
-            Academic Focus
-          </h3>
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-            <div className="bg-gray-800 rounded-lg p-4 border border-gray-700 text-center">
-              <h4 className="text-white font-semibold mb-2">
-                Software Engineering
-              </h4>
-              <p className="text-gray-400 text-sm">
-                Building robust and scalable applications
-              </p>
-            </div>
-            <div className="bg-gray-800 rounded-lg p-4 border border-gray-700 text-center">
-              <h4 className="text-white font-semibold mb-2">Web Development</h4>
-              <p className="text-gray-400 text-sm">
-                Modern full-stack development practices
-              </p>
-            </div>
-            <div className="bg-gray-800 rounded-lg p-4 border border-gray-700 text-center">
-              <h4 className="text-white font-semibold mb-2">
-                Database Systems
-              </h4>
-              <p className="text-gray-400 text-sm">
-                Data modeling and management
-              </p>
-            </div>
-            <div className="bg-gray-800 rounded-lg p-4 border border-gray-700 text-center">
-              <h4 className="text-white font-semibold mb-2">
-                System Architecture
-              </h4>
-              <p className="text-gray-400 text-sm">
-                Designing efficient software solutions
-              </p>
+            <div className="grid gap-4 sm:grid-cols-2">
+              {[
+                {
+                  title: "Software Engineering",
+                  description:
+                    "Building robust, scalable applications with clean architecture.",
+                },
+                {
+                  title: "Web Development",
+                  description:
+                    "Crafting responsive, accessible user interfaces with modern stacks.",
+                },
+                {
+                  title: "Database Systems",
+                  description:
+                    "Designing efficient data models and reliable storage solutions.",
+                },
+                {
+                  title: "System Architecture",
+                  description:
+                    "Planning strong structures for performance and maintainability.",
+                },
+              ].map((item, index) => (
+                <div
+                  key={index}
+                  className="rounded-3xl border border-white/10 bg-slate-950/70 p-6 text-center shadow-xl shadow-slate-950/20 transition duration-300 hover:border-blue-400/50 hover:bg-slate-900/80"
+                >
+                  <h4 className="text-xl font-semibold text-white mb-2">
+                    {item.title}
+                  </h4>
+                  <p className="text-gray-400 text-sm leading-relaxed">
+                    {item.description}
+                  </p>
+                </div>
+              ))}
             </div>
           </div>
         </div>

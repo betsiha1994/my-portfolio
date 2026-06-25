@@ -4,12 +4,12 @@ import { FaGithub, FaExternalLinkAlt } from "react-icons/fa";
 
 const projects = [
   {
-    title: "ITIL Service and Request Management System",
+    title: "Emergency Report and Public Service Coordination system",
     description:
-      "Full-stack ITIL service and request management system with React frontend, Node.js backend, and MongoDB database.",
-    tech: ["React", "Node.js", "MongoDB", "Express"],
-    github: "https://github.com/Asresyayeh/itil-backend",
-    demo: null,
+      "Full-stack Emergency Report and Public Service Coordination system with React frontend, Node.js backend, and PostgreSQL database.",
+    tech: ["React", "Node.js", "PostgreSQL", "Express"],
+    github: null,
+    demo: "https://bahirdarlinkweb.vercel.app/",
   },
   {
     title: "Food Delivery Platform",
@@ -17,7 +17,7 @@ const projects = [
       "Full-stack food delivery platform with real-time updates and user authentication.",
     tech: ["React", "Express", "Node.js", "MongoDB"],
     github: "https://github.com/Asresyayeh/restaurant-backend",
-    demo: null,
+    demo: "https://restaurant-frontend-ochre.vercel.app/",
   },
   {
     title: "e-Kebele system",
@@ -28,68 +28,92 @@ const projects = [
     github: "https://github.com/Asresyayeh/e-kebele-backend",
     demo: "https://e-kebele-git-main-yayehasres1221-9605s-projects.vercel.app/",
   },
+  {
+    title: "Recruitment Management System",
+    description:
+      "A full-stack recruitment management system with job posting, applicant tracking, and interview scheduling features.",
+
+    tech: ["React", "Node.js", "Express", "PostgreSQL"],
+    github: "https://github.com/Asresyayeh/recruitment",
+    demo: null,
+  },
 ];
 
 const Projects = () => {
   return (
     <section
-      className="w-full min-h-screen bg-gradient-to-br from-gray-900 to-gray-800 py-20 px-6"
+      className="relative w-full min-h-screen overflow-hidden py-20 px-6"
       id="projects"
     >
-      <div className="max-w-6xl mx-auto">
-        <h2 className="text-4xl font-bold text-center mb-4 text-white">
-          My Projects
-        </h2>
-        <div className="w-20 h-1 bg-blue-400 mx-auto mb-8"></div>
-        <p className="text-gray-300 text-center mb-12 max-w-2xl mx-auto">
-          Here are some of my recent full-stack projects that showcase my skills
-          in building complete applications.
-        </p>
+      <div className="absolute inset-0 bg-slate-950/95"></div>
+      <div className="absolute inset-0 bg-[radial-gradient(circle_at_top_left,rgba(59,130,246,0.18),transparent_25%),radial-gradient(circle_at_bottom_right,rgba(56,189,248,0.12),transparent_22%)] pointer-events-none"></div>
+      <div className="relative z-10 max-w-6xl mx-auto">
+        <div className="text-center mb-16">
+          <span className="inline-flex rounded-full border border-blue-400/20 bg-blue-500/10 px-4 py-2 text-sm uppercase tracking-[0.32em] text-blue-300 mb-6">
+            Projects
+          </span>
+          <h2 className="text-4xl md:text-5xl font-semibold text-white mb-4">
+            Highlighted Projects
+          </h2>
+          <p className="mx-auto text-gray-300 text-lg max-w-3xl leading-relaxed">
+            A selection of recent full-stack applications built with modern
+            technologies, thoughtful architecture, and polished ideas.
+          </p>
+        </div>
 
-        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
           {projects.map((project, index) => (
             <div
               key={index}
-              className="bg-gray-800 rounded-xl border border-gray-700 p-6 flex flex-col justify-between hover:border-blue-400 transition-all duration-300"
+              className="group rounded-[32px] border border-white/10 bg-white/5 p-6 backdrop-blur-xl shadow-2xl shadow-slate-950/30 transition duration-300 hover:-translate-y-2 hover:border-blue-400/30 flex flex-col justify-between"
             >
               <div>
-                <h3 className="text-xl font-bold text-white mb-3">
+                <div className="mb-5 inline-flex rounded-full bg-blue-500/10 px-3 py-2 text-xs font-semibold uppercase tracking-[0.24em] text-blue-200 shadow-inner shadow-blue-500/10">
+                  Featured
+                </div>
+                <h3 className="text-xl font-semibold text-white mb-3 group-hover:text-blue-300 transition duration-300">
                   {project.title}
                 </h3>
-                <p className="text-gray-300 mb-4 text-sm leading-relaxed">
+                <p className="text-gray-300 mb-5 text-sm leading-relaxed">
                   {project.description}
                 </p>
-                <div className="flex flex-wrap gap-2 mb-4">
+                <div className="flex flex-wrap gap-2 mb-6">
                   {project.tech.map((tech, i) => (
                     <span
                       key={i}
-                      className="text-xs bg-blue-500 text-white px-3 py-1 rounded-full"
+                      className="text-xs bg-slate-900/80 text-blue-200 px-3 py-1 rounded-full border border-white/10"
                     >
                       {tech}
                     </span>
                   ))}
                 </div>
               </div>
-              <div className="flex gap-4 mt-4 pt-4 border-t border-gray-700">
-                <a
-                  href={project.github}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="text-gray-400 hover:text-blue-400 flex items-center gap-2 transition duration-300 text-sm"
-                >
-                  <FaGithub /> Code
-                </a>
+              <div className="flex flex-wrap gap-3 mt-4 pt-4 border-t border-white/10">
+                {project.github ? (
+                  <a
+                    href={project.github}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="inline-flex items-center gap-2 rounded-full border border-blue-400/30 bg-slate-950/80 px-4 py-2 text-sm text-blue-200 transition duration-300 hover:border-blue-400 hover:bg-blue-500/10"
+                  >
+                    <FaGithub /> Code
+                  </a>
+                ) : (
+                  <span className="inline-flex items-center gap-2 rounded-full border border-gray-700 bg-slate-900/80 px-4 py-2 text-sm text-gray-400">
+                    Private Repo
+                  </span>
+                )}
 
-                {project.demo && (
+                {project.demo ? (
                   <a
                     href={project.demo}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="text-gray-400 hover:text-blue-400 flex items-center gap-2 transition duration-300 text-sm"
+                    className="inline-flex items-center gap-2 rounded-full bg-blue-500 px-4 py-2 text-sm text-white transition duration-300 hover:bg-blue-600"
                   >
                     <FaExternalLinkAlt /> Live Demo
                   </a>
-                )}
+                ) : null}
               </div>
             </div>
           ))}

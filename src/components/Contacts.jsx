@@ -31,17 +31,16 @@ const Contacts = () => {
     setIsSubmitting(true);
     setSubmitStatus(null);
 
-    // Format template parameters for EmailJS
     const templateParams = {
       name: formData.name,
       email: formData.email,
       message: formData.message,
-      time: new Date().toLocaleString(), // optional
+      time: new Date().toLocaleString(),
     };
 
     emailjs
       .send(
-        "service_zwepzbf", // ✅ CORRECT service ID
+        "service_zwepzbf",
         "template_soldhe2", // ✅ Your template ID
         templateParams, // ✅ Parameters
         "5n-EWqcovDQvZPJSE", // ✅ Public key
@@ -85,109 +84,118 @@ const Contacts = () => {
   return (
     <section
       id="contact"
-      className="w-full min-h-screen bg-gradient-to-br from-gray-900 to-gray-800 py-20 px-6"
+      className="relative w-full min-h-screen overflow-hidden py-20 px-6 md:px-16 lg:px-32"
     >
-      <div className="max-w-6xl mx-auto">
+      <div className="absolute inset-0 bg-slate-950/95"></div>
+      <div className="absolute inset-0 bg-[radial-gradient(circle_at_top_left,rgba(96,165,250,0.16),transparent_28%),radial-gradient(circle_at_bottom_right,rgba(56,189,248,0.12),transparent_24%)] pointer-events-none"></div>
+      <div className="relative z-10 max-w-6xl mx-auto">
         <div className="text-center mb-16">
-          <h2 className="text-4xl font-bold text-white mb-4">Get In Touch</h2>
-          <div className="w-20 h-1 bg-blue-400 mx-auto mb-6"></div>
-          <p className="text-gray-300 max-w-2xl mx-auto">
-            I'm always interested in new opportunities and exciting projects.
-            Let's discuss how we can work together to bring your ideas to life.
+          <span className="inline-flex rounded-full border border-blue-400/20 bg-blue-500/10 px-4 py-2 text-sm uppercase tracking-[0.28em] text-blue-300 shadow-sm shadow-blue-500/10">
+            Contact
+          </span>
+          <h2 className="mt-6 text-4xl md:text-5xl font-semibold text-white mb-4">
+            Let's Create Something Great
+          </h2>
+          <p className="mx-auto max-w-3xl text-gray-300 text-lg leading-relaxed">
+            I'm always open to new opportunities and collaborations. Reach out
+            to discuss your next project or just to say hello.
           </p>
         </div>
 
-        <div className="grid md:grid-cols-2 gap-12">
+        <div className="grid gap-12 lg:grid-cols-[0.95fr_1.05fr] items-start">
           <div className="space-y-8">
-            <div>
-              <h3 className="text-2xl font-bold text-white mb-6">
+            <div className="rounded-[32px] bg-white/5 border border-white/10 p-8 shadow-2xl shadow-slate-950/30 backdrop-blur-xl">
+              <h3 className="text-2xl font-semibold text-white mb-4">
                 Let's Connect
               </h3>
-              <p className="text-gray-300 mb-8">
-                Whether you have a project in mind, want to collaborate, or just
-                want to say hello, I'd love to hear from you. Send me a message
-                and I'll get back to you as soon as possible.
+              <p className="text-gray-300 leading-relaxed">
+                Whether you have a project in mind, want to collaborate, or
+                simply want to say hello, I’d love to hear from you. Send a
+                message and I’ll get back to you soon.
               </p>
             </div>
 
-            <div className="space-y-6">
-              <div className="flex items-center space-x-4">
-                <div className="w-12 h-12 bg-blue-500 rounded-lg flex items-center justify-center">
-                  <FaEnvelope className="text-white text-xl" />
+            <div className="grid gap-4">
+              {[
+                {
+                  icon: <FaEnvelope className="text-white text-xl" />,
+                  label: "Email",
+                  value: "yayehasres1221@gmail.com",
+                },
+                {
+                  icon: <FaPhone className="text-white text-xl" />,
+                  label: "Phone",
+                  value: "+251962710015",
+                },
+                {
+                  icon: <FaMapMarkerAlt className="text-white text-xl" />,
+                  label: "Location",
+                  value: "Bahir Dar, Ethiopia",
+                },
+              ].map((item) => (
+                <div
+                  key={item.label}
+                  className="flex items-start gap-4 rounded-3xl border border-white/10 bg-slate-900/80 p-5 shadow-lg shadow-slate-950/20"
+                >
+                  <div className="flex h-12 w-12 items-center justify-center rounded-3xl bg-blue-500/10">
+                    {item.icon}
+                  </div>
+                  <div>
+                    <p className="text-gray-400 text-sm">{item.label}</p>
+                    <p className="text-white font-medium">{item.value}</p>
+                  </div>
                 </div>
-                <div>
-                  <p className="text-gray-400 text-sm">Email</p>
-                  <p className="text-white font-medium">
-                    yayehasres1221@gmail.com
-                  </p>
-                </div>
-              </div>
-
-              <div className="flex items-center space-x-4">
-                <div className="w-12 h-12 bg-blue-500 rounded-lg flex items-center justify-center">
-                  <FaPhone className="text-white text-xl" />
-                </div>
-                <div>
-                  <p className="text-gray-400 text-sm">Phone</p>
-                  <p className="text-white font-medium">+251962710015</p>
-                </div>
-              </div>
-
-              <div className="flex items-center space-x-4">
-                <div className="w-12 h-12 bg-blue-500 rounded-lg flex items-center justify-center">
-                  <FaMapMarkerAlt className="text-white text-xl" />
-                </div>
-                <div>
-                  <p className="text-gray-400 text-sm">Location</p>
-                  <p className="text-white font-medium">Bahir Dar, Ethiopia</p>
-                </div>
-              </div>
+              ))}
             </div>
 
-            <div>
+            <div className="rounded-[32px] bg-white/5 border border-white/10 p-6 shadow-2xl shadow-slate-950/20 backdrop-blur-xl">
               <h4 className="text-white font-semibold mb-4">Follow Me</h4>
-              <div className="flex space-x-4">
-                <a
-                  href="https://github.com/betsiha1994"
-                  className="w-10 h-10 bg-gray-700 rounded-lg flex items-center justify-center hover:bg-blue-500 transition duration-300"
-                >
-                  <FaGithub className="text-white text-lg" />
-                </a>
-                <a
-                  href="https://www.linkedin.com/in/asres-yayeh-524424350/"
-                  className="w-10 h-10 bg-gray-700 rounded-lg flex items-center justify-center hover:bg-blue-500 transition duration-300"
-                >
-                  <FaLinkedin className="text-white text-lg" />
-                </a>
-                <a
-                  href="#"
-                  className="w-10 h-10 bg-gray-700 rounded-lg flex items-center justify-center hover:bg-blue-500 transition duration-300"
-                >
-                  <FaTwitter className="text-white text-lg" />
-                </a>
+              <div className="flex flex-wrap gap-4">
+                {[
+                  {
+                    href: "https://github.com/betsiha1994",
+                    icon: <FaGithub className="text-white text-lg" />,
+                  },
+                  {
+                    href: "https://www.linkedin.com/in/asres-yayeh-524424350/",
+                    icon: <FaLinkedin className="text-white text-lg" />,
+                  },
+                  {
+                    href: "https://twitter.com/",
+                    icon: <FaTwitter className="text-white text-lg" />,
+                  },
+                ].map((link) => (
+                  <a
+                    key={link.href}
+                    href={link.href}
+                    className="flex h-12 w-12 items-center justify-center rounded-2xl bg-slate-900 border border-white/10 transition duration-300 hover:bg-blue-500"
+                  >
+                    {link.icon}
+                  </a>
+                ))}
               </div>
             </div>
           </div>
 
-          <div className="bg-gray-800 rounded-xl p-8 border border-gray-700">
-            <h3 className="text-2xl font-bold text-white mb-6">
+          <div className="rounded-[32px] border border-white/10 bg-white/5 p-8 shadow-2xl shadow-slate-950/30 backdrop-blur-xl">
+            <h3 className="text-2xl font-semibold text-white mb-6">
               Send Me a Message
             </h3>
 
             {submitStatus === "success" && (
-              <div className="bg-green-500 text-white p-4 rounded-lg mb-6">
+              <div className="rounded-3xl bg-emerald-500/15 border border-emerald-500 text-emerald-100 p-4 mb-6">
                 Message sent successfully! I'll get back to you soon.
               </div>
             )}
 
             {submitStatus === "error" && (
-              <div className="bg-red-500 text-white p-4 rounded-lg mb-6">
+              <div className="rounded-3xl bg-red-500/15 border border-red-500 text-red-100 p-4 mb-6">
                 Failed to send message. Please try again or email me directly.
               </div>
             )}
 
             <form onSubmit={handleSubmit} className="space-y-6">
-              <div className="grid md:grid-cols-2 gap-4">
+              <div className="grid gap-4 md:grid-cols-2">
                 <div>
                   <label
                     htmlFor="name"
@@ -202,7 +210,7 @@ const Contacts = () => {
                     value={formData.name}
                     onChange={handleChange}
                     required
-                    className="w-full px-4 py-3 bg-gray-700 border border-gray-600 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:border-blue-400 transition duration-300"
+                    className="w-full rounded-2xl border border-white/10 bg-slate-900 px-4 py-3 text-white placeholder-gray-500 focus:border-blue-400 focus:outline-none focus:ring-2 focus:ring-blue-500/10 transition duration-300"
                     placeholder="Enter your name"
                   />
                 </div>
@@ -220,7 +228,7 @@ const Contacts = () => {
                     value={formData.email}
                     onChange={handleChange}
                     required
-                    className="w-full px-4 py-3 bg-gray-700 border border-gray-600 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:border-blue-400 transition duration-300"
+                    className="w-full rounded-2xl border border-white/10 bg-slate-900 px-4 py-3 text-white placeholder-gray-500 focus:border-blue-400 focus:outline-none focus:ring-2 focus:ring-blue-500/10 transition duration-300"
                     placeholder="Enter your email"
                   />
                 </div>
@@ -240,7 +248,7 @@ const Contacts = () => {
                   value={formData.subject}
                   onChange={handleChange}
                   required
-                  className="w-full px-4 py-3 bg-gray-700 border border-gray-600 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:border-blue-400 transition duration-300"
+                  className="w-full rounded-2xl border border-white/10 bg-slate-900 px-4 py-3 text-white placeholder-gray-500 focus:border-blue-400 focus:outline-none focus:ring-2 focus:ring-blue-500/10 transition duration-300"
                   placeholder="What's this about?"
                 />
               </div>
@@ -259,7 +267,7 @@ const Contacts = () => {
                   onChange={handleChange}
                   required
                   rows="5"
-                  className="w-full px-4 py-3 bg-gray-700 border border-gray-600 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:border-blue-400 transition duration-300 resize-none"
+                  className="w-full rounded-2xl border border-white/10 bg-slate-900 px-4 py-3 text-white placeholder-gray-500 focus:border-blue-400 focus:outline-none focus:ring-2 focus:ring-blue-500/10 transition duration-300 resize-none"
                   placeholder="Tell me about your project..."
                 ></textarea>
               </div>
@@ -267,7 +275,7 @@ const Contacts = () => {
               <button
                 type="submit"
                 disabled={isSubmitting}
-                className="w-full bg-blue-500 hover:bg-blue-600 disabled:bg-blue-400 text-white font-semibold py-3 px-6 rounded-lg transition duration-300"
+                className="w-full rounded-full bg-blue-500 px-6 py-3 text-white font-semibold shadow-lg shadow-blue-500/20 transition duration-300 hover:bg-blue-600 disabled:bg-blue-400"
               >
                 {isSubmitting ? "Sending..." : "Send Message"}
               </button>
