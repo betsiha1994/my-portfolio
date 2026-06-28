@@ -36,7 +36,7 @@ const EducationPage = () => {
                   Bahir Dar, Ethiopia
                 </span>
                 <span className="rounded-full border border-blue-400/20 bg-slate-900/70 px-4 py-2">
-                  2020 - 2024
+                  2022 - 2026
                 </span>
               </div>
               <p className="text-slate-300 leading-relaxed">
