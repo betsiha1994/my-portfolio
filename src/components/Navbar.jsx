@@ -33,7 +33,7 @@ const Navbar = () => {
                 to={link.to}
                 smooth={true}
                 duration={500}
-                className="group text-sm font-medium text-slate-300 transition duration-300 hover:text-cyan-300"
+                className="group cursor-pointer text-sm font-medium text-slate-300 transition duration-300 hover:text-cyan-300"
                 activeClass="text-cyan-300"
               >
                 <span className="relative after:absolute after:-bottom-1 after:left-0 after:h-0.5 after:w-full after:scale-x-0 after:bg-cyan-400 after:transition-transform after:duration-300 group-hover:after:scale-x-100">
@@ -49,7 +49,7 @@ const Navbar = () => {
           aria-label={isOpen ? "Close menu" : "Open menu"}
           aria-expanded={isOpen}
           onClick={() => setIsOpen(!isOpen)}
-          className="inline-flex h-11 w-11 items-center justify-center rounded-xl border border-slate-700 bg-slate-900/90 text-slate-100 transition hover:border-cyan-400 hover:text-cyan-300 md:hidden"
+          className="inline-flex cursor-pointer h-11 w-11 items-center justify-center rounded-xl border border-slate-700 bg-slate-900/90 text-slate-100 transition hover:border-cyan-400 hover:text-cyan-300 md:hidden"
         >
           {isOpen ? (
             <FaTimes className="text-xl" />
@@ -68,7 +68,7 @@ const Navbar = () => {
                   to={link.to}
                   smooth={true}
                   duration={500}
-                  className="block rounded-2xl border border-slate-800 bg-slate-900/80 px-4 py-3 text-sm font-medium text-slate-200 transition hover:border-cyan-400 hover:text-cyan-300"
+                  className="block cursor-pointer rounded-2xl border border-slate-800 bg-slate-900/80 px-4 py-3 text-sm font-medium text-slate-200 transition hover:border-cyan-400 hover:text-cyan-300"
                   onClick={() => setIsOpen(false)}
                 >
                   {link.name}
